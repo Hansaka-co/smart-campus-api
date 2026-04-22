@@ -2,6 +2,7 @@ C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\ja
 C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\exception\LinkedResourceNotFoundExceptionMapper.java
 C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\exception\RoomNotEmptyException.java
 C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\exception\RoomNotEmptyExceptionMapper.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\exception\SensorUnavailableException.java
 C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\Main.java
 C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\model\Room.java
 C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\model\Sensor.java
