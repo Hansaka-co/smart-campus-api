@@ -1,21 +1,15 @@
 package com.westminster.resource;
 
-import java.util.Collection;
-import java.util.stream.Collectors;
-
 import com.westminster.exception.LinkedResourceNotFoundException;
 import com.westminster.model.Sensor;
 import com.westminster.service.CampusService;
 
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
-import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
+import java.util.Collection;
+import java.util.stream.Collectors;
 
 @Path("/sensors")
 @Produces(MediaType.APPLICATION_JSON)
@@ -75,9 +69,10 @@ public class SensorResource {
                 .build();
     }
 
-    // Sub-resource locator for readings (Part 4 - placeholder for now)
+    // Sub-resource locator for readings
     @Path("/{sensorId}/readings")
-    public Object getReadingResource(@PathParam("sensorId") String sensorId) {
-        return null;
+    public SensorReadingResource getReadingResource(
+            @PathParam("sensorId") String sensorId) {
+        return new SensorReadingResource(sensorId);
     }
 }
