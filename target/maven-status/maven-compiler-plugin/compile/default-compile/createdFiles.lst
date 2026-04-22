@@ -10,4 +10,5 @@ com\westminster\exception\SensorUnavailableException.class
 com\westminster\Main.class
 com\westminster\model\SensorReading.class
 com\westminster\resource\DiscoveryResource.class
+com\westminster\resource\SensorResource.class
 com\westminster\exception\RoomNotEmptyExceptionMapper.class
