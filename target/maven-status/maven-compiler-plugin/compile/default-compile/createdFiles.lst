@@ -1,0 +1,7 @@
+com\westminster\model\Room.class
+com\westminster\model\Sensor.class
+com\westminster\Main.class
+com\westminster\service\CampusService.class
+com\westminster\model\SensorReading.class
+com\westminster\SmartCampusApplication.class
+com\westminster\resource\DiscoveryResource.class
