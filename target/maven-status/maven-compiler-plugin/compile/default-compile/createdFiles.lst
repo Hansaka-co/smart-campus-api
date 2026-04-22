@@ -1,4 +1,5 @@
 com\westminster\model\Room.class
+com\westminster\exception\SensorUnavailableException.class
 com\westminster\model\Sensor.class
 com\westminster\resource\RoomResource.class
 com\westminster\Main.class
