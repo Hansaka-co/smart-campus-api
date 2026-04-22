@@ -1,7 +1,10 @@
-C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\src\main\java\com\westminster\Main.java
-C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\src\main\java\com\westminster\model\Room.java
-C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\src\main\java\com\westminster\model\Sensor.java
-C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\src\main\java\com\westminster\model\SensorReading.java
-C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\src\main\java\com\westminster\resource\DiscoveryResource.java
-C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\src\main\java\com\westminster\service\CampusService.java
-C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\src\main\java\com\westminster\SmartCampusApplication.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\exception\RoomNotEmptyException.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\exception\RoomNotEmptyExceptionMapper.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\Main.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\model\Room.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\model\Sensor.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\model\SensorReading.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\resource\DiscoveryResource.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\resource\RoomResource.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\service\CampusService.java
+C:\Users\Acer\Desktop\DEV Repo\Git\smart-campus-api\smart-campus-api\src\main\java\com\westminster\SmartCampusApplication.java
