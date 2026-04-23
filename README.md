@@ -73,3 +73,52 @@ mvn exec:java
 http://localhost:8080/api/v1
 
 ---
+## API Endpoints
+
+| Method | URL | Description |
+|--------|-----|-------------|
+| GET | /api/v1/discovery | API metadata and resource links |
+| GET | /api/v1/rooms | Get all rooms |
+| POST | /api/v1/rooms | Create a new room |
+| GET | /api/v1/rooms/{roomId} | Get a specific room |
+| DELETE | /api/v1/rooms/{roomId} | Delete a room (blocked if has sensors) |
+| GET | /api/v1/sensors | Get all sensors (optional ?type= filter) |
+| POST | /api/v1/sensors | Create a new sensor |
+| GET | /api/v1/sensors/{sensorId} | Get a specific sensor |
+| GET | /api/v1/sensors/{sensorId}/readings | Get all readings for a sensor |
+| POST | /api/v1/sensors/{sensorId}/readings | Add a new reading |
+
+---
+
+## Sample curl Commands
+
+**1. Get all rooms:**
+```bash
+curl -X GET http://localhost:8080/api/v1/rooms
+```
+
+**2. Create a new room:**
+```bash
+curl -X POST http://localhost:8080/api/v1/rooms \
+  -H "Content-Type: application/json" \
+  -d '{"id":"HALL-01","name":"Main Hall","capacity":200}'
+```
+
+**3. Get sensors filtered by type:**
+```bash
+curl -X GET "http://localhost:8080/api/v1/sensors?type=CO2"
+```
+
+**4. Add a reading to a sensor:**
+```bash
+curl -X POST http://localhost:8080/api/v1/sensors/TEMP-001/readings \
+  -H "Content-Type: application/json" \
+  -d '{"value":25.5}'
+```
+
+**5. Try to delete a room with sensors (409 error):**
+```bash
+curl -X DELETE http://localhost:8080/api/v1/rooms/LIB-301
+```
+
+---
