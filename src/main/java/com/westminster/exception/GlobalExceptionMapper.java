@@ -1,5 +1,6 @@
 package com.westminster.exception;
 
+import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
@@ -16,6 +17,10 @@ public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
 
     @Override
     public Response toResponse(Throwable e) {
+          // This stops 404s becoming 500s
+        if (e instanceof WebApplicationException) {
+            return ((WebApplicationException) e).getResponse();
+        }
         LOGGER.severe("Unexpected error: " + e.getMessage());
 
         Map<String, String> error = new HashMap<>();
