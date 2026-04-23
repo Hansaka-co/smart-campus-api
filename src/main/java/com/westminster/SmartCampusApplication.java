@@ -1,14 +1,8 @@
 package com.westminster;
 
 import jakarta.ws.rs.ApplicationPath;
-import org.glassfish.jersey.server.ResourceConfig;
+import jakarta.ws.rs.core.Application;
 
 @ApplicationPath("/api/v1")
-public class SmartCampusApplication extends ResourceConfig {
-
-    public SmartCampusApplication() {
-        packages("com.westminster.resource");
-        packages("com.westminster.exception");
-        packages("com.westminster.filter");
-    }
+public class SmartCampusApplication extends Application {
 }
