@@ -1,3 +1,4 @@
+com\westminster\resource\SensorReadingResource.class
 com\westminster\model\Sensor.class
 com\westminster\resource\RoomResource.class
 com\westminster\exception\GlobalExceptionMapper.class
@@ -5,9 +6,12 @@ com\westminster\filter\LoggingFilter.class
 com\westminster\exception\RoomNotEmptyException.class
 com\westminster\service\CampusService.class
 com\westminster\SmartCampusApplication.class
+com\westminster\exception\LinkedResourceNotFoundException.class
 com\westminster\model\Room.class
 com\westminster\exception\SensorUnavailableException.class
+com\westminster\exception\LinkedResourceNotFoundExceptionMapper.class
 com\westminster\Main.class
+com\westminster\exception\SensorUnavailableExceptionMapper.class
 com\westminster\model\SensorReading.class
 com\westminster\resource\DiscoveryResource.class
 com\westminster\resource\SensorResource.class

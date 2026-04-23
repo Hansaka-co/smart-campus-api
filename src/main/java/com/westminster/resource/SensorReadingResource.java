@@ -23,7 +23,6 @@ public class SensorReadingResource {
         this.sensorId = sensorId;
     }
 
-    // GET /api/v1/sensors/{sensorId}/readings
     @GET
     public Response getReadings() {
         if (!service.sensorExists(sensorId)) {
@@ -35,7 +34,6 @@ public class SensorReadingResource {
         return Response.ok(readings).build();
     }
 
-    // POST /api/v1/sensors/{sensorId}/readings
     @POST
     public Response addReading(SensorReading reading) {
         if (!service.sensorExists(sensorId)) {
@@ -43,26 +41,17 @@ public class SensorReadingResource {
                     .entity("{\"error\":\"Sensor not found: " + sensorId + "\"}")
                     .build();
         }
-
-        // Check sensor status - MAINTENANCE cannot accept readings
         Sensor sensor = service.getSensorById(sensorId);
         if ("MAINTENANCE".equalsIgnoreCase(sensor.getStatus())) {
             throw new SensorUnavailableException(sensorId);
         }
-
-        // Auto-generate ID and timestamp if not provided
         if (reading.getId() == null || reading.getId().isEmpty()) {
             reading.setId(UUID.randomUUID().toString());
         }
         if (reading.getTimestamp() == 0) {
             reading.setTimestamp(System.currentTimeMillis());
         }
-
-        // Add reading + updates sensor currentValue automatically
         service.addReading(sensorId, reading);
-
-        return Response.status(Response.Status.CREATED)
-                .entity(reading)
-                .build();
+        return Response.status(Response.Status.CREATED).entity(reading).build();
     }
 }

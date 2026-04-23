@@ -9,17 +9,16 @@ import java.net.URI;
 
 public class Main {
 
-    public static final String BASE_URI = "http://0.0.0.0:8080/";
-
     public static void main(String[] args) throws Exception {
-        final ResourceConfig config = new ResourceConfig()
+
+        ResourceConfig config = new ResourceConfig()
                 .packages("com.westminster.resource",
                           "com.westminster.exception",
                           "com.westminster.filter")
                 .register(JacksonFeature.class);
 
-        final HttpServer server = GrizzlyHttpServerFactory
-                .createHttpServer(URI.create(BASE_URI), config);
+        HttpServer server = GrizzlyHttpServerFactory
+                .createHttpServer(URI.create("http://localhost:8080/api/v1/"), config);
 
         System.out.println("====================================");
         System.out.println(" Smart Campus API is RUNNING!");
